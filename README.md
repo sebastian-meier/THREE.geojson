@@ -1,7 +1,7 @@
 # THREE.geojson
 Convert a geoJSON to a THREE.js 3D mesh structure
 
-![Exmple Rendering of Berlin building data](https://octodex.github.com/images/yaktocat.png)
+![Exmple Rendering of Berlin building data](https://raw.githubusercontent.com/sebastian-meier/THREE.geojson/master/examples/screenshot/top_light.jpg)
 
 The script translates a group of geojson polygons into THREE.js geometries.
 The whole script is still very experimental.
@@ -52,7 +52,7 @@ var jsonFile = "../data/einwohnerdichte2013_mini.geojson",
 	};
 ```
 
-![Exmple Rendering of Berlin building data](https://octodex.github.com/images/yaktocat.png)
+![Exmple Rendering of Berlin building data](https://raw.githubusercontent.com/sebastian-meier/THREE.geojson/master/examples/screenshot/angle_light.jpg)
 
 ## Example Data
 The data in this repository is from the city of berlin.
