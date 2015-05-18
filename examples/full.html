@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js webgl - geojson</title>
+		<meta charset="utf-8">
+		<style>
+			html,body {
+				margin: 0;
+				padding: 0;
+				background-color: #fff;
+				overflow: hidden;
+				width:100%;
+				height:100%;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript" src="../libs/three.min.js"></script>
+		<script type="text/javascript" src="../libs/jquery-2.1.0.min.js"></script>
+		<script type="text/javascript" src="../data/shader.js"></script>
+		<script>
+
+			//For console log messages
+			var log = true;
+
+			/*
+				Dataset specific: 
+					if useHeight = true then the height is calculated from the heightAttr value in the geoJson file
+					if not the height of each object will be 0
+			*/
+
+			var jsonFile = "../data/einwohnerdichte2013.geojson", 
+				useHeight = true, 
+				heightAttr = "EW_HA2013",
+				heightFn = function(val){ return Math.pow(parseFloat(val), root); },
+				root = 1/2.5,
+				max = heightFn(900),
+				z_max = 500.0,
+				z_rel = 0.01,
+				offset_x = -45,
+				offset_y = 59,
+				offset_z = 0,
+				r = 0,
+				scale_x = 209,
+				scale_y = 350,
+				scale_factor = 0.1,
+				heightScaler = 0.5,
+				animateHeight = false,
+				//the system doesn't really have a spatial projection structure
+				//so we simply translate the latitude/longitude values into simple x/y coordinates
+				translateLat = function(lat){
+					if(!lat){lat = 0;}
+					return (lat-13.36)*100;
+				},
+				translateLng = function(lng){
+					if(!lng){lng = 0;}
+					return (lng-52.53)*100;
+				};
+
+		</script>
+		<script type="text/javascript" src="../three.geojson.js"></script>
+	</body>
+</html>
