@@ -6,6 +6,8 @@ Convert a geoJSON to a THREE.js 3D mesh structure
 The script translates a group of geojson polygons into THREE.js geometries.
 The whole script is still very experimental.
 
+<a href="http://prjcts.sebastianmeier.eu/hybridCity/old/buildings.html">DEMO</a>
+
 ## How to
 
 Take a look at the examples.
